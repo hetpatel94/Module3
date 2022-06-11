@@ -5,43 +5,45 @@
 public class OddEven{
     public static void main( String []args)
     {
-        int nums[] = new int[25];
+        int num[] = new int[25];
         int odd = 0, even = 0;
-        int r;
+        int randomNumber;
 
         //create array of 25 random numbers
         for (int i = 0; i < 25; i++)
         {
-            r = 1 + (int) (Math.random() * 100);
-            nums[i] = r;
-            if (r % 2==0) ++even;
+            randomNumber = 1 + (int) (Math.random() * 100);
+            num[i] = randomNumber;
+            if (randomNumber % 2==0) ++even;
             else ++odd;
         }
 
         // create odd and even arrays to exact lengths
-        int e[] = new int[even];
-        int o[] = new int[odd];
+        int evenArray[] = new int[even];
+        int oddArray[] = new int[odd];
         int x = 0,y = 0;
 
-        for (int n : nums) {
+        for (int n : num) {
             if (n % 2== 0) {  //evens
-                e[x] = n;
+                evenArray[x] = n;
                 x++;
             }
             else {
-                o[y] = n;
+                oddArray[y] = n;
                 y++;
             }
 
         }
         // display odd and even arrays
         System.out.print("Even numbers are:");
-        for (int i : e)
+        for (int i : evenArray) {
             System.out.print(i + " ");
+        }
         System.out.println();
         System.out.print("Odd numbers are:");
-        for (int i :o)
+        for (int i :oddArray) {
             System.out.print(i + " ");
+        }
         System.out.println();
     }
 }

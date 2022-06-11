@@ -8,7 +8,7 @@ public class FavovriteNumber
         Scanner inp = new Scanner(System.in); //user's favorite number
         // to read input
         // get user's favorite number
-        System.out.print("What is your favorite number? ");
+        System.out.println("What is your favorite number? ");
         n = inp.nextInt();
 
         // computer next number
